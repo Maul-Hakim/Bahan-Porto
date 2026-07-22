@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pengiriman Kerudung — Hijab JN Collection</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-shell">
+  <main class="main-area">
+    <div class="main-head">
+      <h1>PENGIRIMAN KERUDUNG</h1>
+    </div>
+    <p class="main-sub">Kelola data pengiriman kerudung ke penerima secara real-time.</p>
+
+    <div class="table-card">
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Kode</th>
+              <th>Nama Penerima</th>
+              <th>Jumlah</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <!-- rows injected by js/script.js -->
+          </tbody>
+        </table>
+      </div>
+      <div class="table-foot">
+        <button class="btn-add" id="btnAdd">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          Tambah Pengiriman
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <aside class="sidebar">
+    <div class="admin-badge">
+      <div class="admin-avatar">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="8" r="4" fill="currentColor"/>
+          <path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7" stroke="currentColor" stroke-width="0" fill="currentColor"/>
+        </svg>
+      </div>
+      <span class="admin-name">ADMIN</span>
+    </div>
+
+    <button class="bottom-nav" id="btnLogout" title="Keluar / Beranda" aria-label="Keluar">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 15l6-6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </aside>
+</div>
+
+<!-- Modal: Tambah / Edit Pengiriman -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box">
+    <h3 id="modalTitle">Tambah Pengiriman</h3>
+    <form id="shipForm">
+      <div class="field">
+        <label for="fKode">Kode</label>
+        <input type="text" id="fKode" placeholder="Contoh: 01G" required>
+      </div>
+      <div class="field">
+        <label for="fNama">Nama Penerima</label>
+        <input type="text" id="fNama" placeholder="Nama lengkap penerima" required>
+      </div>
+      <div class="field">
+        <label for="fJumlah">Jumlah</label>
+        <input type="number" id="fJumlah" min="1" placeholder="Jumlah kerudung" required>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn-cancel" id="btnCancel">Batal</button>
+        <button type="submit" class="btn-save">Simpan</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

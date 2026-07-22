@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Admin — Hijab JN Collection</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="login-shell">
+  <div class="login-form-side">
+    <div class="login-form-inner">
+      <h1>LOGIN<br>ADMIN</h1>
+      <p class="sub">Masuk untuk mengelola data pengiriman kerudung.</p>
+
+      <form id="loginForm" novalidate>
+        <div class="field">
+          <label for="username">Username</label>
+          <div class="control">
+            <input type="text" id="username" name="username" placeholder="Username" autocomplete="username" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="password">Kata Sandi</label>
+          <div class="control">
+            <input type="password" id="password" name="password" placeholder="Kata Sandi" autocomplete="current-password" required>
+            <button type="button" class="toggle-eye" id="togglePw" aria-label="Tampilkan kata sandi">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" id="eyeIcon">
+                <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="2" y1="21" x2="22" y2="3" stroke="currentColor" stroke-width="1.8" id="slash" style="display:none"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <p class="error-msg" id="errorMsg"></p>
+
+        <button type="submit" class="btn-masuk">MASUK</button>
+        <p class="hint">Prototipe demo — isi apa saja lalu klik Masuk.</p>
+      </form>
+    </div>
+  </div>
+
+  <div class="login-hero">
+    <img src="assets/images/login-hero.png" alt="Hijab JN Collection">
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
